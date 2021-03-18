@@ -1,0 +1,11 @@
+<h2>Información del cliente</h2>
+<div *ngIf="this.cliente">
+  <p>
+    <span>ID:</span>
+    <span>{{ this.cliente.id }}</span>
+  </p>
+  <p>
+    <span>Nombre:</span>
+    <span>{{ this.cliente.nombre | uppercase }}</span>
+  </p>
+</div>

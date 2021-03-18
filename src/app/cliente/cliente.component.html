@@ -1,0 +1,24 @@
+<h2>Tabla de clientes</h2>
+<div>
+  <button mat-raised-button color="primary" (click)="showAddClient()">Agregar</button>
+</div>
+<div>
+  <table class="mat-elevation-z4">
+    <thead style="background-color: indigo; color: white; font-weight: bold;">
+      <td>{{ columnas[0] | uppercase }}</td>
+      <td>{{ columnas[1] | uppercase }}</td>
+      <td>{{ columnas[2] | uppercase }}</td>
+    </thead>
+    <tr *ngFor="let c of listaClientes; index as _clienteId">
+      <td>{{ c.id }}</td>
+      <td>{{ c.nombre }}</td>
+      <td>
+        <button mat-raised-button [routerLink]="['/cliente', _clienteId]">Ver detalles</button>
+        &nbsp;
+        <button mat-raised-button color="accent" (click)="showUpdateClient(c)">Modificar</button>
+        &nbsp;
+        <button mat-raised-button color="warn" (click)="showConfirmDeleteClient(c.id)">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+</div>
