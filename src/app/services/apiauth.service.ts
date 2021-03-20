@@ -26,7 +26,7 @@ export class ApiauthService {
 
   constructor(private _http: HttpClient) {
     this.usuarioSubject = new BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('usuario')));
-    this.usuario=this.usuarioSubject.asObservable();
+    this.usuario = this.usuarioSubject.asObservable();
   }
 
   login(login: Login): Observable<Response> {

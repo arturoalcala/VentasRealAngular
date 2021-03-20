@@ -20,6 +20,8 @@ import { DialogconfirmComponent } from './common/dialogconfirm/dialogconfirm.com
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './security/jwt.interceptor';
 import { ClienteDetalleComponent } from './cliente-detalle/cliente-detalle.component';
+import { VentaComponent } from './venta/venta.component';
+import { DialogVentaComponent } from './dialogventa/dialogventa.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ClienteDetalleComponent } from './cliente-detalle/cliente-detalle.compo
     DialogconfirmComponent,
     LoginComponent,
     ClienteDetalleComponent,
+    VentaComponent,
+    DialogVentaComponent,
   ],
   imports: [
     BrowserModule,
